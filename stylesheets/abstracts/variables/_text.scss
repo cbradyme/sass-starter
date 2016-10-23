@@ -1,0 +1,38 @@
+//
+// Text
+// --------------------------------------------------
+$google-font-base: 				"";
+$google-font-headings: 		"";
+
+$font-family-sans-serif:	"Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:				Georgia, Times, "Times New Roman", serif;
+$font-family-monospace:		Menlo, Monaco, Consolas, "Courier New", monospace;
+
+@if $google-font-base != "" {
+	$font-family-base: 			"#{$google-font-base}", $font-family-sans-serif;
+} @else {
+	$font-family-base: 			$font-family-sans-serif;
+}
+
+@if $google-font-headings != "" {
+	$font-family-headings: 	"#{$google-font-headings}", $font-family-sans-serif;
+} @else {
+	$font-family-headings: 	inherit;
+}
+
+$font-size-base:					16px;
+$line-height-computed:		26px;
+$line-height-base:				($line-height-computed / $font-size-base);
+
+$font-weight-base:				400;
+$font-weight-headings:		700;
+
+$font-size-large:         ($font-size-base + 2px);
+$font-size-small:         ($font-size-base - 2px);
+
+$font-size-h1:						($font-size-base + 24px);
+$font-size-h2:						($font-size-base + 20px);
+$font-size-h3:						($font-size-base + 16px);
+$font-size-h4:						($font-size-base + 8px);
+$font-size-h5:						($font-size-base + 4px);
+$font-size-h6:						$font-size-base;

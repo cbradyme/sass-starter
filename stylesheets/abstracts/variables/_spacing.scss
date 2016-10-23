@@ -1,0 +1,12 @@
+//
+// Spacing
+// --------------------------------------------------
+
+// Spacing is set in EMs. Refrain from giving font sizes to elements that do not require them. EMs sizing is equal to the current font-size.
+
+$spacing: 					em($line-height-computed);
+$spacing-xsmall: 		($spacing / 4);
+$spacing-small: 		($spacing / 2);
+$spacing-large: 		($spacing * 2);
+$spacing-xlarge: 		($spacing * 4);
+$spacing-offset: 		em(1px);

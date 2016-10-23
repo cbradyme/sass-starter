@@ -1,0 +1,30 @@
+// Helper Grays
+// -------------------------
+
+$black:                 #000 !default;
+$gray-darker:           #222 !default;
+$gray-dark:             #333 !default;
+$gray:                  #555 !default;
+$gray-light:            #999 !default;
+$gray-lighter:          #eee !default;
+$white:                 #fff !default;
+
+// These are your main brand colours. You can add and remove as you please.
+// ------------------------- 
+
+$colors: (
+	primary   : 					$gray,
+	secondary : 					$black,
+	light 		: 					$gray-light,
+	dark 			: 					$gray-dark,
+	inverse   : 					$white
+);
+
+// Specific Colors 
+// ------------------------------------
+
+$brand-primary:         color(primary);
+$brand-secondary:       color(secondary);
+$brand-light:       		color(light);
+$brand-dark:       			color(dark);
+$brand-inverse: 				color(inverse);
