@@ -1,0 +1,64 @@
+/*
+ * Project name
+ */
+
+// Abstracts - No CSS output from this folder. SASS Helpers only.
+// --------------------------------------------------
+
+@import 
+	'abstracts/functions',
+	'abstracts/mixins',
+	'abstracts/variables',
+	'abstracts/booleans';
+
+// Vendor - Any external libraries lets try and incorporate first
+// --------------------------------------------------
+
+// Base - Set up the initial rules for type, sizing etc
+// --------------------------------------------------
+
+@import 
+	'base/reset',
+	'base/base',
+	'base/fonts',
+	'base/typography',
+	'base/utilities';
+
+// Layout - Laying out of website
+// --------------------------------------------------
+
+@import
+	'layout/grid',
+	'layout/header',
+	'layout/navigation',
+	'layout/footer';
+
+// Components - Small specific modules of code
+// --------------------------------------------------
+
+@import
+	'components/links',
+	'components/buttons',
+	'components/cards',
+	'components/heros',
+	'components/forms',
+	'components/dropdowns',
+	'components/inputs',
+	'components/animations';
+
+// Views - All our specific layouts for each page
+// --------------------------------------------------
+
+@import
+	'views/index';
+
+// Themes - We might want to include themes on a prohect to override anything as default
+// --------------------------------------------------
+
+@import
+	'themes/default';
+
+// Shame - Quick css fixes we are not proud off must be imported last. Look to fix these ASAP
+// --------------------------------------------------
+
+@import 'shame';
