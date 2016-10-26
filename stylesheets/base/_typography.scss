@@ -1,0 +1,61 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+  margin: 0;
+  //font-family: $font-family-headings;
+  color: $text-color-headings;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  @include font-size($font-size-h1);
+}
+
+h2 {
+  @include font-size($font-size-h2);
+}
+
+h3 {
+  @include font-size($font-size-h3);
+}
+
+h4 {
+  @include font-size($font-size-h4);
+}
+
+h5 {
+  @include font-size($font-size-h5);
+}
+
+h6 {
+  @include font-size($font-size-h6);
+}
+
+p {
+  @include baseline();
+
+  &.lead {
+    @include font-size($font-size-large);
+  }
+}
+
+small {
+  @include font-size($font-size-small);
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include transition(all, .2s, ease);
+
+  &:hover {
+    color: $link-color-hover;
+  }
+
+  &:active, &:focus {
+    outline: none;
+  }
+}

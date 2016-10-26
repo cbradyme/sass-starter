@@ -28,3 +28,11 @@ $brand-secondary:       color(secondary);
 $brand-light:       		color(light);
 $brand-dark:       			color(dark);
 $brand-inverse: 				color(inverse);
+
+$text-color-base:				$gray-dark;
+$text-color-headings:		inherit;
+
+$link-color:						$brand-primary;
+$link-color-hover:			darken($brand-primary, 5%);
+
+$body-background-color:	$white;

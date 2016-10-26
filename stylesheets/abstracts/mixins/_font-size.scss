@@ -1,0 +1,51 @@
+@mixin font-size($font-size: $font-size-base, $line-height: true, $margin: false) {
+
+	// generates the font-size in REMs with a PX fallback
+	font-size: 0px + $font-size;
+	font-size: 0rem + $font-size / 16px;
+
+	// line-height functions
+	////////////////////////
+
+	@if $line-height == true {
+		//margin-bottom: 0;
+
+		$line-height: $line-height-computed;  
+
+		// if you a line-height is specified in the mixin
+		@if $line-height != $line-height-computed and $line-height != 1 {
+			line-height: line-height($font-size, $line-height);
+		}
+
+		// if $line-height == 1
+		// because, typing 1 is quicker than 16
+		@else if $line-height == 1 {
+			line-height: 1;
+		}
+
+		// normal $line-height
+		// if the line-height is left.
+		@else {
+			line-height: ceil($font-size / $line-height-computed) * ($line-height-computed / $font-size);
+		}
+	}
+
+	// margin-bottom functions
+	//////////////////////////
+
+	// if no is bottom margin is required
+	@if $margin == false {
+	}  
+
+	// if a specific bottom margin is required
+	@else if $margin != true and $margin != false {
+		margin-bottom: 0px + $margin;
+		margin-bottom: 0rem + ($margin / $font-size-base);  
+	}
+
+	// if you're keeping the vertical rhythm with the margin
+	@else {
+		margin-bottom: 0px + $line-height-computed;
+		margin-bottom: 0rem + ($line-height-computed / $font-size-base);  
+	}
+}

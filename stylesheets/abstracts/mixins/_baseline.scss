@@ -1,0 +1,6 @@
+@mixin baseline($type: "margin-bottom", $amount: 1) {
+
+	#{$type}: 0px + ($line-height-computed * $amount);
+	#{$type}: 0rem + ($line-height-computed / $font-size-base);
+
+}
